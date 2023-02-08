@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ccline29/team-2-Project-2/issues"
   },
-  "homepage": "https://github.com/ccline29/team-2-Project-2#readme"
+  "homepage": "https://github.com/ccline29/team-2-Project-2#readme",
+  "dependencies": {
+    "chart.js": "^4.2.0"
+  }
 }
