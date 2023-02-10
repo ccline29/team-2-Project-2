@@ -21,7 +21,7 @@ Expenses.init(
         },
         category: {
             type: DataTypes.STRING,
-
+            allowNull: false,
         },
         pay_to: {
             type: DataTypes.STRING,
