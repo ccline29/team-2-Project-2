@@ -19,12 +19,10 @@ Expenses.init(
             type: DataTypes.DATE,
             allowNull: false,
         },
-        
         category: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        
         pay_to: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -39,7 +37,7 @@ Expenses.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'expenses',
-    }
+    },
 );
 
 module.exports = Expenses;
