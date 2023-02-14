@@ -1,1 +1,141 @@
-<p>Hello Project 2!</p>
+<body>
+    <nav>
+        <div class="logo">FINANCE BRO'S</div>
+        <div class="nav-items">
+          <a href="/">Sign-up</a> <a href="/">Login</a> <a href="/">Info</a>
+        </div>
+      </nav>
+	
+	 <div id='mainDiv'>
+	<div id='formDiv'>
+		<form id='demoForm'>
+			<div class="Row">
+			<fieldset id="fieldset">
+				<table id='regDetails'>
+                    <tr class="column">
+						<p class="p1">Enter your weekly expenses such as grocerys, gas, doctor visits.
+						<td><label id="weekly" for='weeklyInput'>Weekly Expenses</label></td>
+						<td><input type='number' id='weeklyInput'/></td>
+						</p>
+					</tr>
+					<tr class="column">
+						<p class="p2">In this section you will include bills that are taken out monthly such as your mortgage,car note, insurance, and phone bills.</p>
+						<td><label id="monthly" for='MonthlyInput'>Monthly Bills</label></td>
+						<td><input ty pe='number' id='MonthlyInput'/></td>
+					</tr>
+                        <tr class="column">
+						<p >In this section try to calculate the amount you spend on fun. This could include such things as concerts,clubbing,going out to eat etc.</p>
+						<td><label id="active" for='ActiveInput'>Activities</label></td>
+						<td><input type='number' id='ActiveInput'/></td>
+					</tr>
+                    <tr class="column">
+						<p>Enter the amount of your average take home pay.</p>
+						<td><label id="pay" for='PayInput'>Monthly Pay</label></td>
+						<td><input type='number' id='PayInput'/></td>
+					</tr>
+						<td colspan='2'><input type='submit' id='submitButton'/></td>
+				</table>
+			</fieldset>
+			</div>
+		</form>
+		</div>
+	</div>
+	<div id='detailsBox'></div>
+</body>
+<script>
+$(document).ready( function() {
+var templateSource = $("#details-template").html();
+var template = Handlebars.compile(templateSource);
+	$('#submitButton').click(function(){
+			$("#detailsBox").html(template({"weeklyValue":$('#weeklyInput').val(), "MonthlyValue":$('#MonthlyInput').val(),"ActiveValue":$('#ActiveInput').val(),"PayValue":$('#PayInput').val()}));
+	});
+});
+</script>
+<style>
+	
+
+	
+	nav {
+    height: 80px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+  }
+
+
+	.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+  #weekly{
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+  }
+  #monthly {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+
+  }
+  #pay {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+
+  }
+  #active{
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+
+  }
+    #submitButton {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.5rem;
+  }
+ 
+  nav a:hover {
+    color: #fff;
+  }
+  .column {
+  float: right;
+  width: 50%;
+}
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+background-color: #fdcc04;
+
+}
+</style>
