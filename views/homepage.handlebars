@@ -13,26 +13,25 @@
 			<fieldset id="fieldset">
 				<table id='regDetails'>
                     <tr class="column">
-						<p class="p1">Enter your weekly expenses such as grocerys, gas, doctor visits.
-						<td><label id="weekly" for='weeklyInput'>Weekly Expenses</label></td>
-						<td><input type='number' id='weeklyInput'/></td>
-						</p>
-					</tr>
-					<tr class="column">
-						<p class="p2">In this section you will include bills that are taken out monthly such as your mortgage,car note, insurance, and phone bills.</p>
-						<td><label id="monthly" for='MonthlyInput'>Monthly Bills</label></td>
-						<td><input ty pe='number' id='MonthlyInput'/></td>
+						<td><label id="expenses_name" for='expenses_nameInput'>Enter the name of your expense</label></td>
+						<td><input type='string' id='expenses_nameInput'/></td>
 					</tr>
                         <tr class="column">
-						<p >In this section try to calculate the amount you spend on fun. This could include such things as concerts,clubbing,going out to eat etc.</p>
-						<td><label id="active" for='ActiveInput'>Activities</label></td>
-						<td><input type='number' id='ActiveInput'/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Enter the cost here!</label></td>
+						<td><input type='number' id='payment_amountInput'/></td>
 					</tr>
-                    <tr class="column">
-						<p>Enter the amount of your average take home pay.</p>
-						<td><label id="pay" for='PayInput'>Monthly Pay</label></td>
-						<td><input type='number' id='PayInput'/></td>
-					</tr>
+					<form name ="category" action="" method="post" class="category-list">
+            <select id="category-list">
+              <option disabled hidden selected>Select the category of your bill</option>
+              <option value="0">B</option>
+              <option value="1">F</option>
+              <option value="2">E</option>
+              <option value="3">S</option>
+              <option value="4">M</option>
+            </select>
+          </form>
+		  <label for="Date">Choose Date of bill</label>
+          <input id="date-input" type="date" name="party" min="2022-12-12">
 						<td colspan='2'><input type='submit' id='submitButton'/></td>
 				</table>
 			</fieldset>
@@ -53,7 +52,9 @@ var template = Handlebars.compile(templateSource);
 </script>
 <style>
 	
-
+	#category-list {
+		background-color: #fdcc04;
+	}
 	
 	nav {
     height: 80px;
@@ -72,7 +73,7 @@ var template = Handlebars.compile(templateSource);
     font-style: italic;
     padding: 0 2rem;
   }
-  #weekly{
+  #expenses_name {
 	 color: #000;
     font-size: 1.5rem;
     font-weight: bold;
@@ -80,25 +81,7 @@ var template = Handlebars.compile(templateSource);
     padding: 0 2rem;
 
   }
-  #monthly {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-
-  }
-  #pay {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-
-  }
-  #active{
+  #payment_amount {
 	 color: #000;
     font-size: 1.5rem;
     font-weight: bold;
@@ -138,4 +121,5 @@ body {
 background-color: #fdcc04;
 
 }
+
 </style>
