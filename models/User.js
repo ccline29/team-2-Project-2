@@ -36,6 +36,7 @@ User.init(
       },
     },
   },
+  // Hook to make Username all lowercase
   {
     hooks: {
       beforeCreate: async (newUserData) => {
