@@ -1,2 +1,5 @@
 DROP DATABASE IF EXISTS expenses_db;
 CREATE DATABASE expenses_db;
+
+DROP DATABASE IF EXISTS user_db;
+CREATE DATABASE user_db;
