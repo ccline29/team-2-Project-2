@@ -1,24 +1,24 @@
 [
     {
-        "name": "",
-        "email":"",
-        "password":""
+        "name": "Mathew Wyatt",
+        "email":"mathewwyatt@email.com",
+        "password":"123"
     },
     {
-        "name": "",
-        "email":"",
-        "password":""
+        "name": "Jonathan Cline",
+        "email":"jonathancline@email.com",
+        "password":"123"
     },    {
-        "name": "",
-        "email":"",
-        "password":""
+        "name": "Boris Kambeu Kamsu",
+        "email":"boriskambeukamsu@email.com",
+        "password":"123"
     },    {
-        "name": "",
-        "email":"",
-        "password":""
+        "name": "Jasiel Andrade",
+        "email":"jasielandrade@email.com",
+        "password":"123"
     },    {
-        "name": "",
-        "email":"",
-        "password":""
+        "name": "Spencer Fields",
+        "email":"spencerfields@email.com",
+        "password":"123"
     }
 ]
