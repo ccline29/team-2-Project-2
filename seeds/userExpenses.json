@@ -1,0 +1,23 @@
+[
+    {
+        "expense_name": "Electric",
+        "date":"2-13-2023",
+        "category":"Bills",
+        "pay_to": "SWEPCO",
+        "payment_amount": "84.55"
+    },
+    {
+        "expense_name": "Movies",
+        "date":"2-14-2023",
+        "category":"Entertainment",
+        "pay_to": "Regal",
+        "payment_amount": "14.37"
+    },
+    {
+        "expense_name": "Tacos",
+        "date":"2-15-2023",
+        "category":"Food",
+        "pay_to": "Torchy's",
+        "payment_amount": "15.42"
+    }
+]
