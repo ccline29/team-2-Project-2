@@ -19,5 +19,12 @@
         "category":"Food",
         "pay_to": "Torchy's",
         "payment_amount": "15.42"
+    },
+    {
+        "expense_name": "Tacos",
+        "date":"2-15-2023",
+        "category":"Food",
+        "pay_to": "Torchy's",
+        "payment_amount": "15.42"
     }
 ]

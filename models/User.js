@@ -36,10 +36,10 @@ User.init(
       },
     },
   },
-  // Hook to make Username all lowercase
   {
     hooks: {
       beforeCreate: async (newUserData) => {
+        newUserData.email = await newUserData.email.toLowerCase();
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },

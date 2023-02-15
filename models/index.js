@@ -1,13 +1,12 @@
 const User = require('./User');
-const Expenses = require('./expenses');
+const Expenses = require('./Expenses');
 
-// Expenses.hasOne(User, {
-//     foreignKey:
-//     onDelete: 
-// });
+User.hasMany(Expenses, {
+    foreignKey: 'user_id'
+});
 
-// User.hasMany(Expenses, {
-//     foreignKey: 
-// });
+Expenses.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
-module.exports = { User };
+module.exports = { User, Expenses };
