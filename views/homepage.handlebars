@@ -2,7 +2,7 @@
     <nav>
         <div class="logo">FINANCE BRO'S</div>
         <div class="nav-items">
-          <a href="/">Sign-up</a> <a href="/">Login</a> <a href="/">Info</a>
+          <a href="/">Sign-up</a> <a href="/">Login</a> <a href="\layouts\user.handlebars">Info</a>
         </div>
       </nav>
 	
@@ -23,11 +23,11 @@
 					<form name ="category" action="" method="post" class="category-list">
             <select id="category-list">
               <option disabled hidden selected>Select the category of your bill</option>
-              <option value="0">B</option>
-              <option value="1">F</option>
-              <option value="2">E</option>
-              <option value="3">S</option>
-              <option value="4">M</option>
+              <option value="0">Bills</option>
+              <option value="1">Food</option>
+              <option value="2">Entertainment</option>
+              <option value="3">Savings</option>
+              <option value="4">Misc</option>
             </select>
           </form>
 		  <label for="Date">Choose Date of bill</label>
@@ -100,9 +100,11 @@ var template = Handlebars.compile(templateSource);
     border-radius: 50px;
   }
   nav a {
+    font-size: 1rem;
     text-decoration: none;
     color: #000;
-    padding: 0 1.5rem;
+    padding: 1.5rem;
+    font-weight: bold;
   }
  
   nav a:hover {
