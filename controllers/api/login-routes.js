@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('../utils/auth');
-const connection = require('../config/connection');
+const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
+const connection = require('../../config/connection');
 
 
 router.get('/', (req, res) => {
@@ -41,6 +41,7 @@ router.post('/login', (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+    console.log('Successful login!');
   });
 
 module.exports = router;
