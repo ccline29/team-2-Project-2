@@ -1,0 +1,21 @@
+ <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+
+
+         <script>
+           const ctx = document.getElementById('myChart');
+
+           new Chart(ctx, {
+             type: 'pie',
+             data: {
+               labels: ['Bills', 'Entertainment', 'Food', 'Green', 'Misc',],
+               datasets: [{
+                 label: '# of Votes',
+                 data: [0, 1, 1, 1, 1,],
+                 borderWidth: 1
+               }]
+             },
+             options: {}
+           });
+         </script>

@@ -3,9 +3,243 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <link rel="stylesheet" href="./css/webpage.css">
     <title>Project 2</title>
+    <style>
+          .chartBox{
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+	#category-list {
+		background-color: #fdcc04;
+	}
+
+	nav {
+    height: 80px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+  }
+
+
+	.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+  #expenses_name {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+  }
+  #payment_amount {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+
+  }
+    #submitButton {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    padding: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+  .column {
+  float: right;
+  width: 50%;
+}
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+background-color: #fdcc04;
+
+}
+  * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(54, 162, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: white;
+      }
+         nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    padding: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+    body {
+background-color: #fdcc04;
+
+}
+    nav {
+    height: 80px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+  }
+    .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+    .chartBox{
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+	#category-list {
+		background-color: #fdcc04;
+	}
+
+	nav {
+    height: 80px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+  }
+
+
+	.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+  #expenses_name {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+  }
+  #payment_amount {
+	 color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+
+  }
+    #submitButton {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    padding: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+  .column {
+  float: right;
+  width: 50%;
+}
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+background-color: #fdcc04;
+
+}
+</style>
   </head>
   <body>
+
+    <nav>
+        <div class="logo">FINANCE BRO'S</div>
+        <div class="nav-items">
+          <a href="/signup">Sign-up</a> <a href="/login">Login</a> <a href="/users">Info</a>
+        </div>
+      </nav>
     {{{body}}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>

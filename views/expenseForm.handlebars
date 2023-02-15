@@ -1,0 +1,33 @@
+<div id='mainDiv'>
+	<div id='formDiv'>
+		<form id='demoForm'>
+			<div class="Row">
+			<fieldset id="fieldset">
+				<table id='regDetails'>
+                    <tr class="column">
+						<td><label id="expenses_name" for='expenses_nameInput'>Enter the name of your expense</label></td>
+						<td><input type='string' id='expenses_nameInput'/></td>
+					</tr>
+                        <tr class="column">
+						<td><label id="payment_amount" for='payment_amountInput'>Enter the cost here!</label></td>
+						<td><input type='number' id='payment_amountInput'/></td>
+					</tr>
+					<form name ="category" action="" method="post" class="category-list">
+            <select id="category-list">
+              <option disabled hidden selected>Select the category of your bill</option>
+              <option value="0">Bills</option>
+              <option value="1">Food</option>
+              <option value="2">Entertainment</option>
+              <option value="3">Savings</option>
+              <option value="4">Misc</option>
+            </select>
+          </form>
+		  <label for="Date">Choose Date of bill</label>
+          <input id="date-input" type="date" name="party" min="2022-12-12">
+						<td colspan='2'><input type='submit' id='submitButton'/></td>
+				</table>
+			</fieldset>
+			</div>
+		</form>
+		</div>
+	</div>
