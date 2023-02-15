@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">FINANCE BRO'S</div>
+        <div class="nav-items">
+          <a href="/">Sign-up</a> <a href="/">Login</a> <a href="\layouts\user.handlebars">Info</a>
+        </div>
+      </nav>
+    <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+</body>
+</html>
+<style type="text/css">
+   nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    padding: 1.5rem;
+    font-weight: bold;
+  }
+ 
+  nav a:hover {
+    color: #fff;
+  }
+    body {
+background-color: #fdcc04;
+
+}
+    nav {
+    height: 80px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+  }
+    .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+    .chartBox{
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+        </style>
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+         <script>
+           const ctx = document.getElementById('myChart');
+         
+           new Chart(ctx, {
+             type: 'pie',
+             data: {
+               labels: ['Bills', 'Entertainment', 'Food', 'Green', 'Misc',],
+               datasets: [{
+                 label: '# of Votes',
+                 data: [0, 1, 1, 1, 1,],
+                 borderWidth: 1
+               }]
+             },
+             options: {}
+           });
+         </script>
