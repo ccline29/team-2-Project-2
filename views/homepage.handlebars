@@ -1,127 +1,13 @@
-<body>
-    <nav>
-        <div class="logo">FINANCE BRO'S</div>
-        <div class="nav-items">
-          <a href="/">Sign-up</a> <a href="/">Login</a> <a href="\layouts\user.handlebars">Info</a>
+      <section class="hero">
+        <div class="hero-container">
+          <div class="column-left">
+
+            <div class="container">
+                <img src="./css/fin.PNG" alt="Finance Illustration">
+            </div>
+            <h1>Why use us?</h1>
+            <p>
+            With recent inflation and prices on just about everything rising use our simple budgeting app and take control of your finances!
+            </p>
+            <a href='/api/expenseForm'><button>Get Started</button></a>
         </div>
-      </nav>
-	
-	 <div id='mainDiv'>
-	<div id='formDiv'>
-		<form id='demoForm'>
-			<div class="Row">
-			<fieldset id="fieldset">
-				<table id='regDetails'>
-                    <tr class="column">
-						<td><label id="expenses_name" for='expenses_nameInput'>Enter the name of your expense</label></td>
-						<td><input type='string' id='expenses_nameInput'/></td>
-					</tr>
-                        <tr class="column">
-						<td><label id="payment_amount" for='payment_amountInput'>Enter the cost here!</label></td>
-						<td><input type='number' id='payment_amountInput'/></td>
-					</tr>
-					<form name ="category" action="" method="post" class="category-list">
-            <select id="category-list">
-              <option disabled hidden selected>Select the category of your bill</option>
-              <option value="0">Bills</option>
-              <option value="1">Food</option>
-              <option value="2">Entertainment</option>
-              <option value="3">Savings</option>
-              <option value="4">Misc</option>
-            </select>
-          </form>
-		  <label for="Date">Choose Date of bill</label>
-          <input id="date-input" type="date" name="party" min="2022-12-12">
-						<td colspan='2'><input type='submit' id='submitButton'/></td>
-				</table>
-			</fieldset>
-			</div>
-		</form>
-		</div>
-	</div>
-	<div id='detailsBox'></div>
-</body>
-<script>
-$(document).ready( function() {
-var templateSource = $("#details-template").html();
-var template = Handlebars.compile(templateSource);
-	$('#submitButton').click(function(){
-			$("#detailsBox").html(template({"weeklyValue":$('#weeklyInput').val(), "MonthlyValue":$('#MonthlyInput').val(),"ActiveValue":$('#ActiveInput').val(),"PayValue":$('#PayInput').val()}));
-	});
-});
-</script>
-<style>
-	
-	#category-list {
-		background-color: #fdcc04;
-	}
-	
-	nav {
-    height: 80px;
-    background: #fdcc04;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-  }
-
-
-	.logo {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-  }
-  #expenses_name {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-  }
-  #payment_amount {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-
-  }
-    #submitButton {
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    border: none;
-    color: #fdcc04;
-    background: #000;
-    cursor: pointer;
-    border-radius: 50px;
-  }
-  nav a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: #000;
-    padding: 1.5rem;
-    font-weight: bold;
-  }
- 
-  nav a:hover {
-    color: #fff;
-  }
-  .column {
-  float: right;
-  width: 50%;
-}
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body {
-background-color: #fdcc04;
-
-}
-
-</style>

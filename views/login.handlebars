@@ -1,4 +1,7 @@
 
+<h1>Login/Sign up Page</h1>
+<h2>Login</h2>
+<form action=''>
 <div class="field">
   <p class="control has-icons-left ">
     <input class="input" id="email" type="email" placeholder="Email">
@@ -20,14 +23,18 @@
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
+    <button type="submit" class="button is-success">
       Login
     </button>
   </p>
-  {{if error}}
-    <p class="help is-danger">{{error}}</p>
-  {{/if}}
-</div>
-  
-  {{! Path: views\register.handlebars }}  
+</form>
+<h2>Sign up</h2>
+<form action=''>
+  <input class="input" id="name" type="text" placeholder="Name">
+    <input class="input" id="email" type="text" placeholder="Email">
+      <input class="input" id="password" type="password" placeholder="Password">
+          <button type="submit" class="button is-success">
+      Sign up
+    </button>
+</form>
 <script src="login.js"></script>
