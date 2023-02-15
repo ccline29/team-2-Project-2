@@ -11,11 +11,10 @@ Expenses.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        // user_id: {
-            // type: DataTypes.INTEGER,
-            // allowNull: false,
-
-        // }
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
         expense_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -37,12 +36,18 @@ Expenses.init(
             allowNull: false,
         }
     },
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'expenses',
+),
+{
+hooks: {
+    beforeCreate: (newExpensesData) => {
+      return newExpensesData;
     },
-);
+},
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'expenses',
+};
 
 module.exports = Expenses;
