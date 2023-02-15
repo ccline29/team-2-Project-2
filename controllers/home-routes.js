@@ -26,4 +26,12 @@ router.get('/signup', (req, res) => {
 	}
 });
 
+router.get('/users', (req, res) => {
+	try {
+		res.render('user')
+	} catch (error) {
+		res.json(error)
+	}
+} )
+
 module.exports = router;
