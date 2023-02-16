@@ -37,10 +37,10 @@ Click the link below to watch a video demonstration:
 
 
 ## Links:
-
+https://docs.google.com/presentation/d/10w-XcsJLV8YEp94misqPbNQeMUszXh3mYP3aD_XE0as/edit?usp=sharing
 
 ## Credits
-Jasiel Andrade - Login Page, Handlebars, Public, Views, CSS
+Jasiel Andrade - Login Page, Handlebars, Public, CSS, Presentation
 
 Chris Cline - Controllers, server.js, Github, README.md,Presentation
 
@@ -48,7 +48,7 @@ Spencer Fields - Creating MVC, Database, Seeds, Utils, Views, Config
 
 Boris Kamsu - Public/Views
 
-Matthew Wyatt - HTML/CSS Styling, Handlebars, Views,Website Styling
+Mathew Wyatt - HTML/CSS Styling, Handlebars, Views,Website Styling
 
 
 ## License
