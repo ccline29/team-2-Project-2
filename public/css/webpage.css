@@ -96,6 +96,33 @@
    
 }
  
+.input {
+  width: 450px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.center-container {
+  margin-top: 200px;
+}
+
+.fas {
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
  
   @media screen and (max-width: 768px) {
     .hero-container {
