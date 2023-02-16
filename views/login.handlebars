@@ -1,9 +1,8 @@
-
-<h1>Login/Sign up Page</h1>
-<h2>Login</h2>
-<form action=''>
+<div class="center-container">
+<h2 class="login-title">Login</h2>
+<form class="topContainer" action=''>
 <div class="field">
-  <p class="control has-icons-left ">
+  <p class="control has-icons-left has-icons-right ">
     <input class="input" id="email" type="email" placeholder="Email">
     <span class="icon is-small is-left" >
       <i class="fas fa-envelope"></i>
@@ -23,18 +22,39 @@
 </div>
 <div class="field">
   <p class="control">
-    <button type="submit" class="button is-success">
+    <button type="submit" class="button is-danger">
       Login
     </button>
   </p>
+</div>
 </form>
-<h2>Sign up</h2>
-<form action=''>
+<h2 class="login-title">Sign up</h2>
+<form class="topContainer" action=''>
+  <p class="control has-icons-left has-icons-right">
   <input class="input" id="name" type="text" placeholder="Name">
+  <span class="icon is-small is-left" >
+      <i class="fas fa-user"></i>
+    </span>
+  </p>
+  <p class="control has-icons-left has-icons-right ">
     <input class="input" id="email" type="text" placeholder="Email">
+     <span class="icon is-small is-left" >
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </p>
+  <p class="control has-icons-left has-icons-right">
       <input class="input" id="password" type="password" placeholder="Password">
-          <button type="submit" class="button is-success">
+      <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </p>
+    <button type="submit" class="button is-danger">
       Sign up
     </button>
+  
 </form>
+</div>
 <script src="login.js"></script>
