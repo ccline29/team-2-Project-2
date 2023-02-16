@@ -1,17 +1,67 @@
+<body onload="budgetGraph()"> 
+<div class="chartBox">
+<canvas id="myChart"></canvas>
+</div>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+function budgetGraph() {
+	var Bills = document.BudgetForm.Bills.value,
+	Entertainment = document.BudgetForm.Entertainment.value,
+	Savings = document.BudgetForm.Savings.value,
+	Food = document.BudgetForm.Food.value,
+	Misc = document.BudgetForm.Misc.value,
+	ctx = document.getElementById('myChart').getContext('2d');
+	var   data = {
+		labels: ['Bills', 'Entertainment', 'Savings', 'Food', 'Misc'],
+		datasets:
+		[{
+			data: [Bills, Entertainment, Savings, Food, Misc],
+			backgroundColor: ['#FFB1C1',"#0000EF",'#9BD0F5','#36A2EB','#000'],
+            hoverBackgroundColor: ["#FF0000","#FF0000","#FF0000","#FF0000","#FF0000"]
+		}]
+	};
+	var options = {};
+	var myPieChart = new Chart(ctx, {
+		type: 'pie',
+		data: data,
+		options: options
+		
+	});
+}
+
+</script>
+ 
+
+
+
+
+
 <div id='mainDiv'>
 	<div id='formDiv'>
-		<form id='demoForm'>
+		<form name="BudgetForm" method="post">
 			<div class="Row">
 			<fieldset id="fieldset">
 				<table id='regDetails'>
                     <tr class="column">
-						<td><label id="expenses_name" for='expenses_nameInput'>Enter the name of your expense</label></td>
-						<td><input type='string' id='expenses_nameInput'/></td>
+						{{!-- <td><label id="expenses_name" for='expenses_nameInput'>Enter the name of your expense</label></td>
+						<td><input type='string' value=""  id='expenses_nameInput'/></td> --}}
 					</tr>
                         <tr class="column">
-						<td><label id="payment_amount" for='payment_amountInput'>Enter the cost here!</label></td>
-						<td><input type='number' id='payment_amountInput'/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Bills</label></td>
+						<td><input type='number' value="20" name="Bills"/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Entertainment</label></td>
+						<td><input type='number' value="20" name="Entertainment"/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Savings</label></td>
+						<td><input type='number' value="20" name="Savings"/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Food</label></td>
+						<td><input type='number' value="20" name="Food"/></td>
+						<td><label id="payment_amount" for='payment_amountInput'>Misc</label></td>
+						<td><input type='number' value="20" name="Misc" /></td>
+
 					</tr>
+					<div id="too"></div>
 					<form name ="category" action="" method="post" class="category-list">
             <select id="category-list">
               <option disabled hidden selected>Select the category of your bill</option>
@@ -24,11 +74,10 @@
           </form>
 		  <label for="Date">Choose Date of bill</label>
           <input id="date-input" type="date" name="party" min="2022-12-12">
-						<td colspan='2'><input type='submit' id='submitButton'/></td>
+			<button  onclick="budgetGraph()" id="submitButton" type="button">Submit</button>
 				</table>
 			</fieldset>
 			</div>
 		</form>
 		</div>
 	</div>
-	<script src="/js/expense.js"></script>
