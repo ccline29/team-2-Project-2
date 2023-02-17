@@ -2,7 +2,7 @@
 <div class="chartBox">
 <canvas id="myChart"></canvas>
 </div>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
 
 <script>
 
@@ -37,7 +37,7 @@ function budgetGraph() {
 
 
 
-
+<h1>
 <div id='mainDiv'>
 	<div id='formDiv'>
 		<form name="BudgetForm" method="post">
@@ -50,34 +50,28 @@ function budgetGraph() {
 					</tr>
                         <tr class="column">
 						<td><label id="payment_amount" for='payment_amountInput'>Bills</label></td>
-						<td><input type='number' value="20" name="Bills"/></td>
+						<td><input id="input" type='number' value="20" name="Bills"/></td>
 						<td><label id="payment_amount" for='payment_amountInput'>Entertainment</label></td>
-						<td><input type='number' value="20" name="Entertainment"/></td>
+						<td><input type='number' id="input" value="20" name="Entertainment"/></td>
 						<td><label id="payment_amount" for='payment_amountInput'>Savings</label></td>
-						<td><input type='number' value="20" name="Savings"/></td>
+						<td><input type='number' id="input" value="20" name="Savings"/></td>
 						<td><label id="payment_amount" for='payment_amountInput'>Food</label></td>
-						<td><input type='number' value="20" name="Food"/></td>
+						<td><input type='number' id="input" value="20" name="Food"/></td>
 						<td><label id="payment_amount" for='payment_amountInput'>Misc</label></td>
-						<td><input type='number' value="20" name="Misc" /></td>
-
-					</tr>
+						<td><input type='number' id="input" value="20" name="Misc" /></td>
+						</tr>
+						<button  onclick="budgetGraph()" id="submitButton" type="button">Submit</button>
 					<div id="too"></div>
-					<form name ="category" action="" method="post" class="category-list">
-            <select id="category-list">
-              <option disabled hidden selected>Select the category of your bill</option>
-              <option value="0">Bills</option>
-              <option value="1">Food</option>
-              <option value="2">Entertainment</option>
-              <option value="3">Savings</option>
-              <option value="4">Misc</option>
-            </select>
-          </form>
-		  <label for="Date">Choose Date of bill</label>
-          <input id="date-input" type="date" name="party" min="2022-12-12">
-			<button  onclick="budgetGraph()" id="submitButton" type="button">Submit</button>
+					</form>
+					</h1>
+					<p id="p">Categorize your bills into these five fields to get a visualization of where your spending the most money! </p>
+
+			<h2><form name ="category">
+		  </form>
+		</h2>
 				</table>
 			</fieldset>
 			</div>
-		</form>
 		</div>
 	</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
