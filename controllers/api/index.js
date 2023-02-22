@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const userRoutes = require('./user-routes');
-const expenseRoutes = require('./expense-routes');
+const userRoutes = require('./userRoutes');
+const expensesRoutes = require('./expensesRoutes');
 
+// route /api/users and
 router.use('/users', userRoutes);
-router.use('/expenseForm', expenseRoutes);
+// route /api/expenses
+router.use('/expenses', expensesRoutes);
 
 module.exports = router;

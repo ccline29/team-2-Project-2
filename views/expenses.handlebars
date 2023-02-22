@@ -1,0 +1,113 @@
+<section class='has-text-centered'>
+  <h1>Welcome, {{name}}!</h1>
+</section>
+
+<section id='chartcontainer'>
+  <canvas id="myChart"></canvas>
+</section>
+
+<div class="row m-2">
+  <div class="column has-text-centered">
+    <h1>New Expense:</h1>
+    <form class="form new-expenses-form">
+      <div class="form-group">
+        <label for="expense-name">Name:</label>
+        <input class="form-input" type="text" id="expense-name" name="expense-name" />
+      </div>
+      <div class="form-group">
+        <label for="expense-date">Date:</label>
+        <input class="form-input" type="date" id="expense-date" name="expense-date" />
+      </div>
+      <div class="form-group">
+        <label for="expense-category">Category:</label>
+        <select name="expense-category" id="expense-category">
+          <option value="bills">Bills</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="food">Food</option>
+          <option value="green">Green</option>
+          <option value="miscellaneous">Miscellaneous</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="expense-payee">Pay to:</label>
+        <input class="form-input" type='text' id="expense-payee" name="expense-payee" />
+      </div>
+      <div class="form-group">
+        <label for="expense-amount">Amount:</label>
+        <input class="form-input" type='text' id="expense-amount" name="expense-amount" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="button is-medium is-primary is-rounded">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <div class='column has-text-centered'>
+    <h1>Current Expenses:</h1>
+    {{#if expenses.length}}
+      {{#each expenses as |expense|}}
+        <h4 class='p-1'>{{expense.id}}
+          {{expense.pay_to}}
+          {{expense.name}},
+          ${{expense.amount}}
+
+          <button class="button is-small is-danger is-rounded expenses-delete-btn"
+            data-id="{{expense.id}}">DELETE</button>
+        </h4>
+      {{/each}}
+    {{/if}}
+  </div>
+</div>
+{{!-- this is how to make a console log in handlebars.js --}}
+{{!-- {{log 'myData >>>' myData}} --}}
+{{!-- end row line 9--}}
+
+<script src="./js/expenses.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart');
+
+  // makes a string of categories with commas separating the values example "1,Entertainment,3,Food"
+  const strcats = `{{#each expenses as |expense|}}{{expense.id}},{{expense.category}},{{/each}}`;
+  // makes a string of amounts with commas separating the values example "1,44.44,3,22.22"
+  const strAmounts = `{{#each expenses as |expense|}}{{expense.id}},{{expense.amount}},{{/each}}`;
+  //console.log('cats = ', strcats);
+  //console.log('Amounts = ', strAmounts);
+
+  // creates an Array splitting all the string values at the commas
+  let catsArr = strcats.split(',');
+  let amountsArr = strAmounts.split(',');
+
+  // splits the original catsArr which is a one dimensional array into even and odd indexes in a two dimensional array Array of arrays
+  function splitArray() {
+    let oddOnes = [], evenOnes = [];
+    for (var i = 0; i < catsArr.length; i++)
+      (i % 2 == 0 ? evenOnes : oddOnes).push(catsArr[i]);
+    return [evenOnes, oddOnes];
+  }
+  const categories = splitArray(catsArr);
+  //console.log('categories', categories);
+
+  function splitArray2() {
+    let oddOnes = [], evenOnes = [];
+    for (var i = 0; i < amountsArr.length; i++)
+      (i % 2 == 0 ? evenOnes : oddOnes).push(amountsArr[i]);
+    return [evenOnes, oddOnes];
+  }
+  const myAmounts = splitArray2(amountsArr);
+  //console.log('amounts', myAmounts);
+
+  //creates the chart with the variables categories[1] and myAmounts[1]
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: categories[1],
+      datasets: [{
+        label: 'count',
+        data: myAmounts[1],
+        borderWidth: 1
+      }]
+    },
+    options: {}
+  });
+</script>

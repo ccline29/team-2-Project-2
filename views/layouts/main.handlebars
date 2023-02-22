@@ -1,272 +1,57 @@
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
 
-    <link rel="stylesheet" href="./css/webpage.css">
-    <title>Project 2</title>
-    <style>
-          .chartBox{
-        width: 400px;
-        height: 400px;
-        justify-content: center;
-        align-content: center;
-        margin-left: auto;
-        margin-right: auto;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Bros</title>
+  <link rel="stylesheet" href="./css/bulma.css">
+  {{!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="./css/webpage.css">
+</head>
 
-    }
-
-
-	#category-list {
-		background-color: #fdcc04;
-	}
-
-	nav {
-    height: 80px;
-    background: #fdcc04;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-  }
-
-
-	.logo {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-  }
-  #expenses_name {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-  }
-  #payment_amount {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-
-  }
-    #submitButton {
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    border: none;
-    color: #fdcc04;
-    background: #000;
-    cursor: pointer;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 0;
-    margin-left: 48rem;
-    margin-bottom: 12rem;
-  }
-  nav a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: #000;
-    padding: 1.5rem;
-    font-weight: bold;
-    border-color: #000;
-
-  }
-
-  nav a:hover {
-    color: #fff;
-  }
-  .column {
-  float: right;
-  width: 50%;
-}
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body {
-background-color: #fdcc04;
-
-}
-  * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-      .chartMenu {
-        width: 100vw;
-        height: 40px;
-        background: #1A1A1A;
-        color: rgba(54, 162, 235, 1);
-      }
-      .chartMenu p {
-        padding: 10px;
-        font-size: 20px;
-      }
-      .chartCard {
-        width: 100vw;
-        height: calc(100vh - 40px);
-        background: rgba(54, 162, 235, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .chartBox {
-        width: 700px;
-        padding: 20px;
-        border-radius: 20px;
-        border: solid 3px rgba(54, 162, 235, 1);
-        background: white;
-      }
-         nav a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: #000;
-    padding: 1.5rem;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    color: #fff;
-  }
-    body {
-background-color: #fdcc04;
-
-}
-    nav {
-    height: 80px;
-    background: #fdcc04;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-  }
-    .logo {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-  }
-    .chartBox{
-        width: 400px;
-        height: 400px;
-        justify-content: center;
-        align-content: center;
-        margin-left: auto;
-        margin-right: auto;
-      margin-bottom: 5rem;
-      margin-top: 1rem;
-    }
-
-	#category-list {
-		background-color: #fdcc04;
-	}
-
-	nav {
-    height: 68px;
-    background: #fdcc04;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-    border-bottom: 3px solid black;
-  }
-
-
-	.logo {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-  }
-  #expenses_name {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
-
-  }
-  #payment_amount {
-	 color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 3.5rem;
-  }
-  nav a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: #000;
-    padding: 1.5rem;
-    font-weight: bold;
-   border-right: 3px solid black;
-  padding-left: 3rem;
-  }
-
-  nav a:hover {
-    color: #fff;
-    background-color: #000;
-  }
-  .column {
-  float: right;
-  width: 50%;
-}
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body {
-background-color: #fdcc04;
-
-}
-#input{
-  height: 2rem;
-  background-color: #fdcc04;
-  color:  #000;
-  border-color: #000;
-}
-#img{
-  height: 500px;
-  width: 800px;
-  padding-top: 1rem;
-}
-.text{
-  left: 50px;
-}
-#p {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  font-style: italic;
-  padding-bottom: 2rem;
-  color: #000;
-}
-</style>
-  </head>
-  <body>
-
-    <nav>
-        <div class="logo">FINANCE BRO'S</div>
-        <div class="nav-items">
-          <a href="/signup">Sign-up</a> <a href="/login">Login</a> <a href="/users">Home</a>
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class='navbar-item' id='logo' href="/">
+          <span aria-label="money-symbol">💲</span>
+          &nbsp;FINANCE BRO'S&nbsp;
+          <span aria-label="money-symbol">💲</span>
+        </a>
+      </div> <!-- end navbar brand -->
+      <div class='navbar-end'>
+        <div class='navbar-item'>
+          <!-- Conditionally render login or expenses and logout links -->
+          {{#if logged_in}}
+            <a href="/expenses" id='expenses'>Expenses</a> |
+            <a href='/logout' id="logout">Logout</a>
+          {{else}}
+            <a href="/login" id='login'>Login</a>
+          {{/if}}
         </div>
-      </nav>
-    {{{body}}}>
-  </body>
+      </div>
+    </nav>
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
+  <br />
+  <br />
+  <br />
+  <br />
+  <footer class='has-text-grey'>
+    <h6 class='has-text-centered'>created by The Finance Bro's</h6>
+    <h6 class='has-text-centered'>
+      (Mathew Wyatt, Chris Cline, Boris Kambeu Kamsu, Jasiel Andrade,
+      and Spencer Fields)
+    </h6>
+  </footer>
+  <!-- Render for logged in users only -->
+  {{#if logged_in}}
+    <script src="./js/logout.js"></script>
+  {{/if}}
+</body>
+
 </html>
