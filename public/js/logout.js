@@ -5,10 +5,10 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    document.location.replace('/login');
+    document.location.replace('/');
   } else {
     alert(response.statusText);
   }
 };
-//TODO: add event listener to signup button to trigger function on click
+
 document.querySelector('#logout').addEventListener('click', logout);

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Electric",
+        "date": "2-13-2023",
+        "category": "Bills",
+        "pay_to": "SWEPCO",
+        "amount": "88.88",
+        "user_id": "2"
+    },
+    {
+        "name": "Movies",
+        "date": "2-14-2023",
+        "category": "Entertainment",
+        "pay_to": "Regal",
+        "amount": "44.44",
+        "user_id": "1"
+    },
+    {
+        "name": "Tacos",
+        "date": "2-15-2023",
+        "category": "Food",
+        "pay_to": "Torchy's",
+        "amount": "55.55",
+        "user_id": "2"
+    },
+    {
+        "name": "Tacos",
+        "date": "2-15-2023",
+        "category": "Food",
+        "pay_to": "Torchy's 2",
+        "amount": "22.22",
+        "user_id": "1"
+    }
+]
