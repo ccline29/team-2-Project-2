@@ -6,9 +6,5 @@ const expensesRoutes = require('./expensesRoutes');
 router.use('/users', userRoutes);
 // route /api/expenses
 router.use('/expenses', expensesRoutes);
-// middleware to handle requests to unknown routes
-router.use((req, res) => {
-    res.status(404).end();
-});
 
 module.exports = router;
